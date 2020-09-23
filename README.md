@@ -2,11 +2,12 @@
 
 Install anaconda or miniconda https://docs.conda.io/en/latest/miniconda.html
 
+Clone the repository:
 ```bash
 git clone --recursive https://github.com/RaisaDZ/anomaly_with_experts.git anomaly_with_experts
 cd anomaly_with_experts
 ```
-Option --recursive is important as the repository contains the submodule [NAB](https://github.com/numenta/NAB)
+Option --recursive is important as the repository contains the submodule [NAB](https://github.com/numenta/NAB).
 
 To create conda environment:
 
