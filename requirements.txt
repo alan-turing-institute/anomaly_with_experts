@@ -4,4 +4,5 @@ simplejson==3.11.1
 boto3==1.9.134
 scikit-learn==0.21.1
 plotly==2.0.0
-matplotlib==3.3.2;
+matplotlib==3.3.2
+tqdm==4.49.0;
