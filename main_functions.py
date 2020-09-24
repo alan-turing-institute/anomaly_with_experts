@@ -1,7 +1,7 @@
 import numpy as np
 
 
-def calculate_loss(target, score, loss_type="log", epsilon=10 ** (-15)):
+def calculate_loss(target, score, loss_type="log", epsilon=1e-7):
     """
 
     The losses of predictions.
@@ -15,7 +15,7 @@ def calculate_loss(target, score, loss_type="log", epsilon=10 ** (-15)):
     loss_type : {"log", "square"}
     epsilon : float, optional
         Replace predictions 0 and 1 with epsilon and 1-epsilon
-        for "log" loss_type (the default is 10**(-15)).
+        for "log" loss_type (the default is 1e-7).
 
     Returns
     -------
@@ -44,7 +44,7 @@ def calculate_loss(target, score, loss_type="log", epsilon=10 ** (-15)):
 
 
 def share_algorithm(
-    target, score_experts, share_type="Fixed", alpha=0, epsilon=10 ** (-15)
+    target, score_experts, share_type="Fixed", alpha=0, epsilon=1e-7
 ):
     """
 
@@ -62,7 +62,7 @@ def share_algorithm(
         The switching rate between experts (the default is 0, i.e. the Aggregating Algorithm).
     epsilon : float, optional
         Replace predictions 0 and 1 with epsilon and 1-epsilon
-        for "log" loss_type (the default is 10**(-15)).
+        for "log" loss_type (the default is 1e-7).
 
     Returns
     -------
