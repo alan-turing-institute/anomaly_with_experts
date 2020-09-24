@@ -1,6 +1,6 @@
 import pandas as pd
 
-from main_functions import calculate_loss, share_algorithm
+from main_functions import share_algorithm
 
 
 def read_nab(algorithm_list, folder_name, file_name):
