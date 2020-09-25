@@ -6,19 +6,18 @@ from main_functions import share_algorithm
 def read_nab(algorithm_list, folder_name, file_name):
     """
     The table of experts' predictions.
-    
+
     Parameters
     ----------
     algorithm_list : list of str
         List of algorithms (experts).
     folder_name : str
     file_name : str
-    
+
     Returns
     -------
     dt : pandas DataFrame
         The DataFrame of experts' predictions.
-    
     """
     dt = pd.read_csv(
         f"NAB/results/{algorithm_list[0]}/{folder_name}/{algorithm_list[0]}{file_name}"
@@ -45,7 +44,7 @@ def read_nab(algorithm_list, folder_name, file_name):
 def get_scores(target, score_experts, share_range, alpha_range):
     """
     The table of the algorithms' predictions for a range of shares and alpha
-    
+
     Parameters
     ----------
     target : numpy array
@@ -56,13 +55,12 @@ def get_scores(target, score_experts, share_range, alpha_range):
         List of the algorithms ["Fixed", "Variable"].
     alpha : list of float
         List of the switching rates.
-        
+   
     Returns
     -------
     scores_share : pandas DataFrame
         The DataFrame of algorithms' predictions.
     """
-    
     for m, share_type in enumerate(share_range):
         for n, alpha in enumerate(alpha_range):
             alpha0 = int(100 * alpha)
