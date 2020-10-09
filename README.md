@@ -1,6 +1,6 @@
 # Real-time anomaly detection with superexperts
 
-If you want to see the results of the paper there is no need to run anything. The visualisation of results is available [here](https://nbviewer.jupyter.org/github/alan-turing-institute/anomaly_with_experts/blob/master/results_plots.ipynb) and the analysis of losses and classification metrics is available [here](https://nbviewer.jupyter.org/github/alan-turing-institute/anomaly_with_experts/blob/master/results_analysis.ipynb).
+The repository reproduces the results of the paper [Real-time anomaly detection with superexperts](https://arxiv.org/abs/2010.03857). If you want to see the results of the paper there is no need to run anything: the visualisation of results is available [here](https://nbviewer.jupyter.org/github/alan-turing-institute/anomaly_with_experts/blob/master/results_plots.ipynb) and the analysis of losses and classification metrics is available [here](https://nbviewer.jupyter.org/github/alan-turing-institute/anomaly_with_experts/blob/master/results_analysis.ipynb).
 
 If you want to run the project the easiest way is to use [Binder](https://mybinder.org). Click on [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/alan-turing-institute/anomaly_with_experts/master).
 
