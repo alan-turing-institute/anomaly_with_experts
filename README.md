@@ -1,12 +1,6 @@
-# Real-time anomaly detection with superexperts
+# Anomaly detection with superexperts under delayed feedback
 
-The repository reproduces the results of the paper [Real-time anomaly detection with superexperts](https://arxiv.org/abs/2010.03857). If you want to see the results of the paper there is no need to run anything: the visualisation of results is available [here](https://nbviewer.jupyter.org/github/alan-turing-institute/anomaly_with_experts/blob/master/results_plots.ipynb) and the analysis of losses and classification metrics is available [here](https://nbviewer.jupyter.org/github/alan-turing-institute/anomaly_with_experts/blob/master/results_analysis.ipynb).
-
-If you want to run the project the easiest way is to use [Binder](https://mybinder.org). Click on [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/alan-turing-institute/anomaly_with_experts/master).
-
-On Binder you need to first run `main.ipynb` to calculate the predictions of Fixed-share and Variable-share and output the results (this will take around 35 minutes on Binder or around 15 minutes to run locally). After that you can run `results_analysis.ipynb` and `results_plots.ipynb`.
-
-If you want to run the project locally follow the installation instructions below.
+The visualisation of results is available [here](https://nbviewer.jupyter.org/github/alan-turing-institute/anomaly_with_experts/blob/master/results_plots.ipynb) and the analysis of losses and classification metrics is available [here](https://nbviewer.jupyter.org/github/alan-turing-institute/anomaly_with_experts/blob/master/results_analysis.ipynb). To run the project locally follow the installation instructions below.
 
 ## Installation
 
@@ -45,5 +39,5 @@ To launch it:
 jupyter notebook
 ```
 
-After that you should be able to run `main.ipynb` which calculates the predictions of Fixed-share and Variable-share on NAB and outputs the results. 
-Then you can run `results_analysis.ipynb` to analyse the losses and classification metrics and `results_plots.ipynb` to visualise the plots from the paper.
+After that, you should first run `calculate_predictions.ipynb` which calculates the predictions of Fixed-share and Variable-share on NAB and outputs the results. 
+Then you can run `results_analysis.ipynb` to analyse the losses and classification metrics and `results_plots.ipynb` to visualise the plots from the paper. The main functions of the implementation are available in folder `anomaly_delays`.
