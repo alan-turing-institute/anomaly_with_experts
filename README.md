@@ -1,6 +1,6 @@
 # Anomaly detection with superexperts under delayed feedback
 
-The visualisation of results from the paper is available [here](https://nbviewer.jupyter.org/github/alan-turing-institute/anomaly_with_experts/blob/master/results_plots.ipynb) and the analysis of losses and classification metrics is available [here](https://nbviewer.jupyter.org/github/alan-turing-institute/anomaly_with_experts/blob/master/results_analysis.ipynb). Check out our [app](https://share.streamlit.io/RaisaDZ/experts_app/main/app_experts.py) (we recommend to use Mozilla Firefox or Google Chrome) that visualises the algorithms' predictions, losses, and weights for each time-series. To run the project locally follow the installation instructions below.
+The visualisation of results from the paper is available [here](https://nbviewer.jupyter.org/github/alan-turing-institute/anomaly_with_experts/blob/master/results_plots.ipynb) and the analysis of losses and classification metrics is available [here](https://nbviewer.jupyter.org/github/alan-turing-institute/anomaly_with_experts/blob/master/results_analysis.ipynb). To run the project locally follow the installation instructions below.
 
 ## Installation
 
