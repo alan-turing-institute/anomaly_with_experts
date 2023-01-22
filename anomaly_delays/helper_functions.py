@@ -38,9 +38,7 @@ def read_nab(algorithm_list, folder_name, file_name):
                 "NAB/results",
                 f"{algo_ind}/{folder_name}/{algo_ind}{file_name}",
             )
-        )[["anomaly_score"]].rename(
-            {"anomaly_score": f"score_{algo_ind}"}, axis=1
-        )
+        )[["anomaly_score"]].rename({"anomaly_score": f"score_{algo_ind}"}, axis=1)
         expert_predictions = pd.merge(
             expert_predictions,
             expert_predictions_add,
@@ -87,9 +85,7 @@ def create_delays_indices(steps_number, delays=1):
     array([1, 6])
     """
     if isinstance(delays, int):
-        delays_array = np.cumsum(
-            np.repeat(delays, np.floor(steps_number / delays))
-        )
+        delays_array = np.cumsum(np.repeat(delays, np.floor(steps_number / delays)))
     else:
         assert sum(delays) <= steps_number
         delays_array = np.cumsum(delays)
@@ -118,7 +114,7 @@ def generate_random_delays(max_length, min_delay, max_delay):
     return random_delay_list
 
 
-def calc_cum_avg_loss(losses, current_delay):
+def calc_avg_loss(losses, current_delay, flag_cumulative=False):
     """
     Calculate cumulative average losses
     for the array of losses and the current delay.
@@ -129,12 +125,14 @@ def calc_cum_avg_loss(losses, current_delay):
     delays_group = np.repeat(0, delays_array[-1] + 1)
     for j in range(delays_array.shape[0]):
         if j < delays_array.shape[0] - 1:
-            delays_group[(delays_array[j] + 1) : (delays_array[j + 1] + 1)] = (
-                j + 1
-            )
+            delays_group[(delays_array[j] + 1) : (delays_array[j + 1] + 1)] = j + 1
     losses_trim = losses[: (delays_array[-1] + 1)].copy()
     losses_trim["delay_group"] = delays_group
     losses_avg = losses_trim.groupby(["delay_group"], as_index=False).mean()
     losses_avg_cumsum = losses_avg.cumsum()
     losses_avg_cumsum["delay_group"] = losses_avg_cumsum.index
-    return losses_avg_cumsum
+    if flag_cumulative:
+        losses_return = losses_avg_cumsum
+    else:
+        losses_return = losses_avg
+    return losses_return
